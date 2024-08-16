@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 633px;
+    border-bottom: 20px solid #0e9e0c;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-image: url('imagens/fundo.jpg'); /* Caminho da imagem de fundo */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área visível */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background: linear-gradient(#87CEEB, #0e9e0c), url('imagens/fundo.jpg'); /* Fundo com gradiente e imagem */
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.sonic {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.fundo {
+    position: absolute;
+    width: 1500px;
+    animation: fundo-animation 20s infinite linear;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60% {
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
